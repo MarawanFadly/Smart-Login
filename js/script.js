@@ -31,6 +31,9 @@ inputPassword.placeholder="Enter Your Email";
 inputPassword.type = "email";
 
 
+
+// --------------------------Sign Up BUtton ------------------------
+
 SignUpbtn.addEventListener('click',function(){
 
 var UserRegisteration =
@@ -43,10 +46,8 @@ var UserRegisteration =
 
   users.push(UserRegisteration);
 
-
 if (inputEmail.value==='' && inputPassword.value==='' && SignPass.value==='')
   {
-    
      inputEmail.classList.add('is-invalid');
      inputPassword.classList.add('is-invalid');
      SignPass.classList.add('is-invalid');
@@ -55,7 +56,6 @@ if (inputEmail.value==='' && inputPassword.value==='' && SignPass.value==='')
 
 else if (inputEmail.value==='' || inputPassword.value==='' || SignPass.value==='')
   {
-    
      inputEmail.classList.add('is-invalid');
      inputPassword.classList.add('is-invalid');
      SignPass.classList.add('is-invalid');
@@ -69,17 +69,12 @@ else if (inputEmail.value==='' || inputPassword.value==='' || SignPass.value==='
     inputPassword.classList.add('is-valid');
     SignPass.classList.add('is-valid');
     
- 
-    //storing data if all inputs are successfully validated
-  // ******************************************************//
-  
-console.log(users.length)   //returns the number of users saved in localstorage 
+
 localStorage.setItem('users', JSON.stringify(users)) 
 counter++;
   }
 
 })
-
 
 SignInText.addEventListener('click',function(){
 AddedInput='';
@@ -117,6 +112,18 @@ function isValidPassRegex(inputPassword) {
 }
 
 buttonLogin.addEventListener('click',function(){
+  
+  // /storing data if all inputs are successfully validated
+  // ******************************************************//
+  
+console.log(users.length)   //returns the number of users saved in localstorage 
+console.log(users);// all datas entered by the user 
+
+// for(let i=0;i<users.length;i++){
+//   console.log(users[i].Email);
+// }
+    
+
 if (inputEmail.value==='' && inputPassword.value==='')
   {
      errortext.classList.remove('textShow');
@@ -134,12 +141,33 @@ else if (inputEmail.value==='' || inputPassword.value==='')
     }
 
   else if (isValidEmailRegex(inputEmail.value) && isValidPassRegex(inputPassword.value)){
+  
+  for(let i=0; i<users.length;i++){
+  
+    if((inputEmail.value==users[i].Email) && (inputPassword.value==users[i].Password))
+  
+  {
   inputEmail.classList.add('is-valid');
   inputPassword.classList.add('is-valid');
+  successtext.classList.remove('success-display');
+
   console.log('Email & Password are both correct in Regex Form')
+  console.log('data are registered in the system ')
 
   const elem = document.getElementById('website'); 
-  elem.href = "Daniels.html"
+  elem.href = "Daniels.html" 
+  }
+
+  else
+  
+  {
+  console.log("Data are not registered in the system")
+  inputEmail.classList.add('is-invalid');
+  inputPassword.classList.add('is-invalid');
+
+  }   
+}
+ 
   // dataArr=JSON.parse(localStorage.setItem(inputEmail.value,inputPassword.value))
   
 }
