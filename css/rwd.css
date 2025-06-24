@@ -1,0 +1,30 @@
+/* Responsive Media Queries */
+
+/* screen        width
+
+  xs        <     576 px
+
+  sm        >     576 px 
+
+  md        >     768px 
+
+  xl        >     1200 px 
+
+  xxl       >     1400px */
+
+/* 
+small devices
+Smart Phones 
+*/
+
+@media screen and (max-width:576px) {
+    .animated-cards {
+        height: 100%;
+        width: auto;
+    }
+
+   #testimonial .text-card-wrap {
+    width: 100%;
+    height:100%
+}
+}

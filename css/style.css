@@ -1,0 +1,429 @@
+:root {
+    --white-color: white;
+    --primary-color: #007aff;
+    --tertiary-color: rgb(231, 226, 226);
+    --footer-color: #748182;
+    --gray-light-color: rgba(255, 255, 255, 0.671);
+    --color-text: #4e4e4e;
+    --yellow-color: yellow;
+    --black-color: black;
+    --gray-color: rgb(247, 247, 247);
+    --dark-gray-color: #343434d7;
+    --light-gray-color: #f4f4f4;
+    --about-color: #343434;
+    --Emphasis-color: #999999;
+    --section-color-design: #222222;
+
+    /* swiper color, width */
+    --swiper-pagination-color: var(--color-text);
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+
+    /* fonts montserrat */
+
+    .montserrat-service {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+        color: var(--about-color);
+    }
+
+    .montserrat-text-section {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--footer-color);
+    }
+
+    .montserrat-titles {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: var(--section-color-design);
+    }
+
+
+    /* fonts poppins */
+
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        color: var(--about-color);
+    }
+
+    .poppins-about {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--Emphasis-color);
+    }
+
+    .poppins-normal {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--footer-color);
+    }
+
+
+}
+
+/* dotted line color*/
+.decoration-dotted {
+    -webkit-text-decoration-style: dotted !important;
+    text-decoration-style: dotted !important;
+    text-decoration-color: rgb(224, 230, 225) !important;
+    -moz-text-decoration-color: rgb(224, 230, 225) !important;
+}
+
+html {
+    scroll-padding: 60px;
+}
+
+nav .active {
+    color: purple !important;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+    text-underline-offset: 4px;
+}
+
+.nav-scroll {
+    min-height: 60px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+
+#home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7)), url(../imgs/bg.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* underline home navbar
+
+.underline-text {
+    position: relative;
+}
+
+.underline-text::after {
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    background-color: var(--white-color);
+    height: 3px;
+    width: 58%;
+} */
+
+/* circle social icons */
+
+.circle {
+    height: 30%;
+    border-radius: 50%;
+    background-color: var(--black-color);
+}
+
+.circle-brands-icons {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.brands-icons:hover .circle-brands-icons {
+    background-color: var(--white-color);
+    border: 3px solid black;
+    color: var(--black-color);
+}
+
+/* buttons hover */
+.btn:hover {
+    color: var(--black-color);
+    background-color: var(--white-color);
+
+}
+
+.btn-dark {
+    --bs-btn-bg: var(--black-color);
+}
+
+.btn-outline-dark:hover {
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+
+/* Second section */
+
+.card {
+    background-color: var(--white-color);
+    height: fit-content;
+    border: 5px solid white;
+    border-radius: 2%;
+}
+
+.round-circle {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: var(--gray-color);
+
+}
+
+.card:hover .round-circle {
+    background-color: var(--black-color);
+    transition: all 0.5s;
+
+    .fa-solid,
+    .fa-regular {
+        color: var(--white-color);
+    }
+}
+
+.item:hover .round-circle {
+    background-color: var(--black-color);
+    transition: all 0.5s;
+
+    .fa-solid {
+        color: var(--white-color);
+    }
+}
+
+
+a.hyperlink-remove {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+/* underline third section subcategory */
+
+.underline-all {
+    position: relative;
+}
+
+.underline-all::after {
+    content: '';
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    background-color: var(--black-color);
+    height: 2px;
+    width: 58%;
+}
+
+#works .upper-layer {
+    opacity: 0;
+}
+
+#works .brands:hover .upper-layer {
+    opacity: 1;
+    margin: 5px;
+    transition: 0.5s linear;
+    -webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -ms-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+}
+
+
+button.underline-hover {
+    position: relative;
+}
+
+button.underline-hover::before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    left: 15px;
+    top: 35px;
+    width: 0%;
+    background-color: var(--black-color);
+    transition: width .4s;
+    -webkit-transition: width .4s;
+    -moz-transition: width .4s;
+    -ms-transition: width .4s;
+    -o-transition: width .4s;
+}
+
+button.underline-hover:hover::before {
+    width: 61%;
+}
+
+.nav {
+    --bs-nav-link-color: var(--black-color);
+    --bs-nav-link-hover-color: var(--black-color);
+}
+
+.nav-pills {
+    --bs-nav-pills-link-active-color: var(--black-color);
+    --bs-nav-pills-link-active-bg: var(--white-color);
+    --bs-nav-pills-link-gap: 1.5rem;
+    --bs-nav-pills-link-bg: var(--white-color);
+    --bs-nav-pills-link-hover-bg: var(--white-color);
+    /* --bs-nav-pills-link-active-border-color: var(--ds-border-selected); */
+}
+
+.animated-cards {
+    padding: 15%;
+}
+
+.customer {
+    color: #888888;
+    font-size: 12px;
+}
+
+.text-customer {
+    color: #888888;
+}
+
+.card-img {
+    height: 100px;
+    width: 100px;
+}
+
+.card-profile {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.slide-position {
+    position: relative;
+    top: 60px;
+    left: 0;
+}
+
+.text-card-wrap {
+    width: 65%;
+    line-height: 1.6;
+}
+
+.text-alignment {
+    line-height: 0.7;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    top: 20px;
+    left: 0;
+    width: 100%;
+}
+
+/* counter section css */
+
+.Awards {
+    height: 100vh;
+    width: 100%;
+}
+
+.number {
+    font-weight: 900;
+    color: var(--black-color);
+}
+
+#text-line {
+    line-height: 0.8;
+}
+
+.img-footer {
+    background-color: var(--dark-gray-color);
+}
+
+
+#team .upper-layer {
+    opacity: 0;
+}
+
+#team .child:hover .upper-layer {
+    opacity: 1;
+    margin: 5px;
+}
+
+.brand:hover .upper-layer {
+    transform: rotateY(360deg);
+    position: relative;
+    transition: 0.8s ease-out;
+    -webkit-transition: 0.8s ease-out;
+    -moz-transition: 0.8s ease-out;
+    -ms-transition: 0.8s ease-out;
+    -o-transition: 0.8s ease-out;
+}
+
+.circle-brands {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+
+/* form css */
+
+.name {
+    border: 3px solid #f4f4f4;
+    border-radius: 5px;
+    background-color: var(--light-gray-color);
+
+}
+
+input[type=Email] {
+    border: 3px solid #f4f4f4;
+    border-radius: 5px;
+    background-color: var(--light-gray-color);
+}
+
+.btn-package {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn-container {
+    position: relative;
+    right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+
+.height-area {
+    height: 170px;
+    border: 3px solid #f4f4f4;
+    border-radius: 5px;
+    background-color: var(--light-gray-color);
+    width: 85%;
+}
+
+/* footer */
+.footer-text {
+    color: var(--footer-color);
+}
+
+.address-footer {
+    white-space: nowrap;
+}
+
+button a#logout{
+    text-decoration: none;
+    color:red;
+}

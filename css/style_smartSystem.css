@@ -1,0 +1,109 @@
+* {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+:root {
+    --body-color: #24353f;
+    --head-color: #17a2b8;
+    --white-color: #fff;
+}
+
+body {
+    background-color: var(--body-color);
+}
+
+h1 {
+    color: var(--head-color);
+}
+
+input[type=text] {
+    background-color: var(--body-color);
+
+}
+
+.effect {
+    box-shadow: 10px 38px 172px 1px rgba(0, 0, 0, 1);
+}
+
+/* //input form focus */
+
+.form-control {
+    outline: 1px solid rgb(255, 255, 255);
+    background-color: var(--body-color) !important;
+
+}
+
+.form-control:focus {
+    outline: 1px solid;
+    outline-color: var(--head-color);
+    background-color: var(--body-color) !important;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: var(--white-color);
+    opacity: 0.7;
+}
+
+input[type=password],
+input[type=email] {
+    background-color: var(--body-color) !important;
+
+}
+
+.btn:hover {
+    color: white;
+}
+
+.signUp {
+    color: white ! important;
+    text-decoration: none;
+}
+
+.textShow {
+    display: none;
+}
+
+.success-display {
+    display: none;
+}
+
+.Styling {
+    color: red;
+}
+
+.Styling-success {
+    color: green;
+}
+
+.is-invalid {
+    outline: 1px solid red;
+    background-color: var(--body-color) !important;
+
+}
+
+.is-valid {
+    outline: 1px solid green;
+}
+
+.form-text {
+    color: orange;
+    font-size: 12px;
+}
+
+.form-text-deactivate {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
