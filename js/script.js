@@ -12,12 +12,12 @@ var SignInText = document.getElementById("sign");
 var SignUpbtn = document.getElementById("loginText");
 var buttonLogin = document.getElementById('loginText');
 var errortext = document.getElementById('error-text');
-var SignPass = document.getElementById('signPass');
 var textUser = document.getElementById('userdata');
 const elem = document.getElementById('website');
 
 
 w.addEventListener('click', function () {
+
   var AddedInput = '';
   AddedInput = `<div class="mt-3 pt-2 mb-2 pb-2">
       <input type="password" id= "signPass" class="form-control border-0 rounded-2" placeholder="Enter Your Password">
@@ -30,6 +30,8 @@ w.addEventListener('click', function () {
   inputEmail.type = "text";  //assigning text to the first input{Strings only!}
   inputPassword.placeholder = "Enter Your Email";
   inputPassword.type = "email";
+  
+  var SignPass = document.getElementById('signPass');
 
 
   // --------------------------Sign Up BUtton ------------------------
@@ -45,6 +47,7 @@ w.addEventListener('click', function () {
     };
 
     users.push(UserRegisteration);
+
 
     if (inputEmail.value === '' && inputPassword.value === '' && SignPass.value === '') {
       inputEmail.classList.add('is-invalid');
@@ -135,7 +138,7 @@ buttonLogin.addEventListener('click', function () {
 
         let Username = users[i].Name;
         console.log(Username);
-        
+
         inputEmail.classList.add('is-valid');
         inputPassword.classList.add('is-valid');
         successtext.classList.remove('success-display');
