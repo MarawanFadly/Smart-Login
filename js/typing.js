@@ -15,3 +15,8 @@ new TypeIt(".type-anim", {
     .pause(2000)
     .delete(8, { delay: 0 })
     .go()
+
+
+
+
+    
