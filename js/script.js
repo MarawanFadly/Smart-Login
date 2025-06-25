@@ -30,7 +30,7 @@ w.addEventListener('click', function () {
   inputEmail.type = "text";  //assigning text to the first input{Strings only!}
   inputPassword.placeholder = "Enter Your Email";
   inputPassword.type = "email";
-  
+
   var SignPass = document.getElementById('signPass');
 
 
@@ -46,7 +46,38 @@ w.addEventListener('click', function () {
       Password: SignPass.value,
     };
 
-    users.push(UserRegisteration);
+    
+
+
+
+    // Email & Password Validation
+
+    //Name validation
+
+    function ValidNameRegex(inputEmail) {
+      const nameRegex = /[a-zA-z0-9\!-_$]$/;
+      return nameRegex.test(inputEmail);
+    }
+
+    // //Email validation
+
+    function ValidMailRegex(inputPassword) {
+      const mailRegex = /[a-zA-z0-9\!-_$]+\@[a-zA-z]+\.[a-zA-z]{3}$/
+      return mailRegex.test(inputPassword);
+    }
+
+    // //Password validation
+
+
+    function ValidPassRegex(SignPass) {
+      const PassRegex = /[a-zA-z0-9\!-_$]$/;
+      return PassRegex.test(SignPass);
+    }
+
+    ValidNameRegex(inputEmail);
+    ValidMailRegex(inputPassword);
+    ValidPassRegex(SignPass);
+
 
 
     if (inputEmail.value === '' && inputPassword.value === '' && SignPass.value === '') {
@@ -65,11 +96,12 @@ w.addEventListener('click', function () {
 
     }
 
-    else if (inputEmail.value != null && inputPassword.value != null && SignPass.value != null) {
+    else if (ValidNameRegex(inputEmail.value) && ValidMailRegex(inputPassword.value) && ValidPassRegex(SignPass.value)) {
       successtext.classList.remove('success-display');
       inputEmail.classList.add('is-valid');
       inputPassword.classList.add('is-valid');
       SignPass.classList.add('is-valid');
+      users.push(UserRegisteration);
       localStorage.setItem('users', JSON.stringify(users))
       counter++;
     }
@@ -163,7 +195,6 @@ buttonLogin.addEventListener('click', function () {
   else {
     inputEmail.classList.add('is-invalid');
     inputPassword.classList.add('is-invalid');
-    console.log('There is a problem with the provided email/password');
   }
 
 })
