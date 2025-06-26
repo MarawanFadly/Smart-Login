@@ -12,8 +12,9 @@ var SignInText = document.getElementById("sign");
 var SignUpbtn = document.getElementById("loginText");
 var buttonLogin = document.getElementById('loginText');
 var errortext = document.getElementById('error-text');
-var textUser = document.getElementById('userdata');
+var textUser = document.querySelector('#userdata');
 const elem = document.getElementById('website');
+
 
 
 w.addEventListener('click', function () {
@@ -46,11 +47,9 @@ w.addEventListener('click', function () {
       Password: SignPass.value,
     };
 
-    
 
 
-
-    // Email & Password Validation
+    // Name, Email & Password Validation
 
     //Name validation
 
@@ -120,7 +119,7 @@ w.addEventListener('click', function () {
 
 })
 
-///////////////////////////Login Button/////////////////
+/********************************Login Button/************************************/
 
 // Email & Password Validation
 
@@ -177,9 +176,9 @@ buttonLogin.addEventListener('click', function () {
         console.log('Email & Password are both correct in Regex Form')
         console.log('data are registered in the system ')
         elem.href = "Daniels.html"
+        let textDaniels = ''
         textDaniels = `<div>${users[i].Name}</div>`
-        console.log(textDaniels);
-        document.getElementById('userdata').innerHTML = textDaniels;
+        textUser.innerHTML = textDaniels;
         break;
       }
 
